@@ -5,7 +5,17 @@ import ProjectCards from './ProjectCards';
 import vehicleDocs360Img from "@/assets/vehicleDocs360.png";
 import sideLineFootballImg from "@/assets/sidelineImg.jpeg";
 
-const projects = [
+interface ProjectsInterface {
+    projectImg: string;
+    title: string;
+    timeframe: string;
+    desc: string;
+    techStack: string[];
+    link: string;
+    githublink: string;
+}
+
+const projects: ProjectsInterface[] = [
     {
         projectImg: synctaskImg,
         title: "SyncTask",
