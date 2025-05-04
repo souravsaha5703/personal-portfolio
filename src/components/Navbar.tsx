@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
                 <div className='w-full flex items-center justify-between'>
                     <h1 className='font-literata font-bold text-slate-950 text-3xl cursor-pointer'>S</h1>
                     <div className='flex gap-5'>
-                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Home')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 text-xl cursor-pointer'>
+                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Home')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 hover:text-yellow-500 text-xl cursor-pointer'>
                             Home
                             {hovered == "Home" && (
                                 <motion.div
@@ -36,13 +36,13 @@ const Navbar: React.FC = () => {
                                     animate={{ scaleX: 1 }}
                                     exit={{ scaleX: 0 }}
                                     transition={{ duration: 0.2, ease: "linear" }}
-                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-slate-950 origin-center"
+                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-500 origin-center"
                                 >
 
                                 </motion.div>
                             )}
                         </motion.span>
-                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Projects')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 text-xl cursor-pointer'>
+                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Projects')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 hover:text-yellow-500 text-xl cursor-pointer'>
                             Projects
                             {hovered == "Projects" && (
                                 <motion.div
@@ -50,13 +50,13 @@ const Navbar: React.FC = () => {
                                     animate={{ scaleX: 1 }}
                                     exit={{ scaleX: 0 }}
                                     transition={{ duration: 0.2, ease: "linear" }}
-                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-slate-950 origin-center"
+                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-500 origin-center"
                                 >
 
                                 </motion.div>
                             )}
                         </motion.span>
-                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Contact')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 text-xl cursor-pointer'>
+                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Contact')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 hover:text-yellow-500 text-xl cursor-pointer'>
                             Contact
                             {hovered == "Contact" && (
                                 <motion.div
@@ -64,13 +64,13 @@ const Navbar: React.FC = () => {
                                     animate={{ scaleX: 1 }}
                                     exit={{ scaleX: 0 }}
                                     transition={{ duration: 0.2, ease: "linear" }}
-                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-slate-950 origin-center"
+                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-500 origin-center"
                                 >
 
                                 </motion.div>
                             )}
                         </motion.span>
-                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Resume')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 text-xl cursor-pointer'>
+                        <motion.span transition={{ duration: 0.5, ease: "linear" }} onMouseEnter={() => setHovered('Resume')} onMouseLeave={() => setHovered(null)} className='relative font-montserrat font-normal text-slate-950 hover:text-yellow-500 text-xl cursor-pointer'>
                             Resume
                             {hovered == "Resume" && (
                                 <motion.div
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                                     animate={{ scaleX: 1 }}
                                     exit={{ scaleX: 0 }}
                                     transition={{ duration: 0.2, ease: "linear" }}
-                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-slate-950 origin-center"
+                                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-500 origin-center"
                                 >
 
                                 </motion.div>
