@@ -24,7 +24,11 @@ export default {
   			literata: [
   				'Literata',
   				'sans-serif'
-  			]
+  			],
+			lobstar: [
+				'Lobstar',
+				'sans-serif'
+			]
   		},
   		colors: {
   			background: 'hsl(var(--background))',

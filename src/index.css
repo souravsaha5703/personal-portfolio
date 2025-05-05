@@ -13,6 +13,11 @@
   src: url('../fonts/Literata/Literata-VariableFont_opsz\,wght.ttf');
 }
 
+@font-face {
+  font-family: 'Lobstar';
+  src: url('../fonts/Lobster/Lobster-Regular.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,6 +50,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -77,7 +83,31 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
 }

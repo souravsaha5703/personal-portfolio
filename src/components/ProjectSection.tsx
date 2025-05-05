@@ -58,7 +58,7 @@ const ProjectSection: React.FC = () => {
                 />
                 <h1 className='font-literata font-bold text-blue-500 text-[3vw] tracking-tight leading-tight'>Featured Projects</h1>
                 <p className='max-w-[600px] font-montserrat font-medium text-2xl text-slate-500 text-center'>I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
-                <div className='max-w-[800px] flex p-5 flex-wrap gap-4'>
+                <div className='max-w-[800px] flex p-5 flex-wrap gap-4 items-center justify-center'>
                     {projects.map((project, index) => {
                         return (
                             <ProjectCards
