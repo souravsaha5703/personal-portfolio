@@ -4,6 +4,8 @@ import synctaskImg from "@/assets/synctask.png";
 import ProjectCards from './ProjectCards';
 import vehicleDocs360Img from "@/assets/vehicleDocs360.png";
 import sideLineFootballImg from "@/assets/sidelineImg.jpeg";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { motion } from "motion/react";
 
 interface ProjectsInterface {
     projectImg: string;
@@ -56,8 +58,14 @@ const ProjectSection: React.FC = () => {
                     color={"#000000"}
                     refresh
                 />
-                <h1 className='font-literata font-bold text-blue-500 text-[3vw] tracking-tight leading-tight'>Featured Projects</h1>
-                <p className='max-w-[600px] font-montserrat font-medium text-2xl text-slate-500 text-center'>I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
+                <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 text-[3vw] tracking-tight leading-tight'>Featured Projects</TextAnimate>
+                <motion.p
+                    initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ ease: "easeIn", delay: 0.2 }}
+                    className='max-w-2xl font-montserrat font-medium text-center text-2xl text-slate-400 break-keep'>
+                    I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
+                </motion.p>
                 <div className='max-w-[800px] flex p-5 flex-wrap gap-4 items-center justify-center'>
                     {projects.map((project, index) => {
                         return (
