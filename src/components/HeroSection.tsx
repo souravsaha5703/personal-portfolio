@@ -9,6 +9,7 @@ import profileImg from "@/assets/dp.jpeg";
 import Navbar from './Navbar';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { FaSquareXTwitter } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
     return (
@@ -39,15 +40,15 @@ const HeroSection: React.FC = () => {
                                 Frontend Developer
                             </motion.h4>
                             <div className='flex gap-4 justify-start items-center'>
-                                <div className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
+                                <Link to={'https://www.linkedin.com/in/sourav-saha-973984286/'} className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
                                     <IoLogoLinkedin className='text-xl text-blue-600' />
-                                </div>
-                                <div className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
+                                </Link>
+                                <Link to={'https://x.com/exoticSourav03'} className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
                                     <FaSquareXTwitter className='text-xl' />
-                                </div>
-                                <div className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
+                                </Link>
+                                <Link to={'https://github.com/souravsaha5703'} className='rounded-full size-8 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
                                     <IoLogoGithub className='text-xl' />
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>

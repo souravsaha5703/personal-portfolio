@@ -1,14 +1,12 @@
 import React from 'react';
 import { motion } from "motion/react";
 import { Particles } from "@/components/magicui/particles";
-import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 const AboutMeSection: React.FC = () => {
     return (
         <>
-            <div className='relative w-full h-screen flex items-center justify-center gap-10'>
+            <div className='relative w-full h-[700px] flex items-center justify-center gap-10'>
                 <Particles
                     className="absolute inset-0 z-0"
                     quantity={100}
@@ -23,19 +21,9 @@ const AboutMeSection: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ ease: "easeIn", delay: 0.2 }}
                         className='max-w-3xl font-montserrat font-medium text-center text-2xl text-slate-400 break-keep'>
-                        I have been coding for over 2 years, starting my journey in the beginning of 2023. Initially I learned C, JAVA, Python at college and also a bit of DSA topics of my own. Then i learned HTML, CSS, and JavaScript to build websites. My first project was a simple TODO website built with HTML, CSS, and JavaScript (mid-2023). As I progressed, I focused heavily on React.js.
+                        I'm Sourav Saha a Frontend Developer from the city of joy Kolkata. I have been coding for over 2 years, starting my journey in the beginning of 2023. Initially I learned C, JAVA, Python at college and also a bit of DSA topics of my own. Then i learned HTML, CSS, and JavaScript to build websites. My first project was a simple TODO website built with HTML, CSS, and JavaScript (mid-2023). As I progressed, I focused heavily on React.js.
                     </motion.p>
-                    <div className='flex gap-4 justify-center items-center'>
-                        <div className='rounded-full size-12 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
-                            <IoLogoLinkedin className='text-3xl text-blue-600' />
-                        </div>
-                        <div className='rounded-full size-12 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
-                            <FaSquareXTwitter className='text-3xl' />
-                        </div>
-                        <div className='rounded-full size-12 flex items-center justify-center drop-shadow-md bg-slate-50 cursor-pointer'>
-                            <IoLogoGithub className='text-3xl' />
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </>
