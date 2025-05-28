@@ -12,7 +12,7 @@ const Page: React.FC = () => {
       <HeroSection />
       <AboutMeSection />
       <ProjectSection />
-      <div className="flex flex-col gap-8 w-full my-10">
+      <div className="flex flex-col gap-8 w-full py-10 dark:bg-[#00072d]">
         <InfiniteLanguageCards direction="left" speed="normal" />
       </div>
       <ContactSection/>

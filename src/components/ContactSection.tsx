@@ -9,15 +9,15 @@ import { Link } from "react-router-dom";
 const ContactSection: React.FC = () => {
     return (
         <>
-            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden'>
+            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden dark:bg-[#00072d]'>
                 <Ripple />
                 <div className='flex flex-col gap-5 items-center justify-center px-2'>
-                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 text-[3vw] tracking-tight leading-tight'>Lets Stay Connected</TextAnimate>
+                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 dark:text-blue-600 text-[3vw] tracking-tight leading-tight'>Lets Stay Connected</TextAnimate>
                     <motion.p
                         initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ ease: "easeIn", delay: 0.2 }}
-                        className='max-w-2xl font-montserrat font-medium text-center text-xl text-slate-400 break-keep'>
+                        className='max-w-2xl font-montserrat font-medium text-center text-xl text-slate-400 dark:text-slate-300 break-keep'>
                         Have questions or want to collaborate? I’m always open to new projects or even a casual conversation—feel free to get in touch!
                     </motion.p>
                     <div className='flex gap-5 mt-10'>
