@@ -25,8 +25,8 @@ interface ProjectCardProps {
 const ProjectCards: React.FC<ProjectCardProps> = ({ projectImg, title, timeFrame, desc, techStack, link, githubLink }) => {
     return (
         <BlurFade delay={0.25} inView>
-            <Card className={"w-[350px] flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full dark:bg-slate-900/10 dark:backdrop-blur-md dark:shadow-md"}>
-                <Link to={link} ><img src={projectImg} alt={title} width={500} height={300} className="h-40 w-full overflow-hidden object-cover object-top" /></Link>
+            <Card className={"w-[350px] flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full dark:bg-slate-900/10 dark:backdrop-blur-md dark:shadow-md max-[375px]:w-[300px]"}>
+                <Link to={link} ><img src={projectImg} alt={title} className="h-40 w-full overflow-hidden object-cover object-top" /></Link>
                 <CardHeader className="px-3">
                     <div>
                         <CardTitle className="text-lg font-bold font-montserrat text-blue-600 dark:text-blue-500">{title}</CardTitle>

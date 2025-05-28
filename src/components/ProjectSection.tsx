@@ -52,7 +52,7 @@ const ProjectSection: React.FC = () => {
     const { theme } = useTheme();
     return (
         <>
-            <div className='relative w-full h-full flex flex-col items-center justify-center gap-4 dark:bg-[#00072d]'>
+            <div className='relative w-full h-full flex flex-col items-center justify-center gap-4 dark:bg-[#00072d]' id='projects'>
                 <Particles
                     className="absolute inset-0 z-0"
                     quantity={100}
@@ -60,12 +60,12 @@ const ProjectSection: React.FC = () => {
                     color={theme === "dark" ? "#ffffff" : "#000000"}
                     refresh
                 />
-                <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 dark:text-blue-600 text-[3vw] tracking-tight leading-tight'>Featured Projects</TextAnimate>
+                <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 dark:text-blue-600 text-6xl tracking-tight leading-tight max-[768px]:text-5xl max-[425px]:text-4xl'>Featured Projects</TextAnimate>
                 <motion.p
                     initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ ease: "easeIn", delay: 0.2 }}
-                    className='max-w-2xl font-montserrat font-medium text-center text-2xl text-slate-400 dark:text-slate-300 break-keep'>
+                    className='max-w-2xl font-montserrat font-medium text-center text-2xl text-slate-400 dark:text-slate-300 break-keep max-[768px]:px-5 max-[768px]:text-base'>
                     I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
                 </motion.p>
                 <div className='max-w-[800px] flex p-5 flex-wrap gap-4 items-center justify-center'>

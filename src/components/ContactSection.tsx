@@ -9,18 +9,18 @@ import { Link } from "react-router-dom";
 const ContactSection: React.FC = () => {
     return (
         <>
-            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden dark:bg-[#00072d]'>
+            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden dark:bg-[#00072d]' id='contact'>
                 <Ripple />
-                <div className='flex flex-col gap-5 items-center justify-center px-2'>
-                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 dark:text-blue-600 text-[3vw] tracking-tight leading-tight'>Lets Stay Connected</TextAnimate>
+                <div className='flex flex-col gap-5 items-center justify-center px-2 max-[768px]:px-5'>
+                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-blue-500 dark:text-blue-600 text-6xl tracking-tight leading-tight max-[768px]:text-5xl max-[425px]:text-4xl max-[393px]:text-center max-[393px]:text-[30px] max-[336px]:text-[24px]'>Lets Stay Connected</TextAnimate>
                     <motion.p
                         initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ ease: "easeIn", delay: 0.2 }}
-                        className='max-w-2xl font-montserrat font-medium text-center text-xl text-slate-400 dark:text-slate-300 break-keep'>
+                        className='max-w-2xl font-montserrat font-medium text-center text-xl text-slate-400 dark:text-slate-300 break-keep max-[425px]:text-base'>
                         Have questions or want to collaborate? I’m always open to new projects or even a casual conversation—feel free to get in touch!
                     </motion.p>
-                    <div className='flex gap-5 mt-10'>
+                    <div className='flex gap-5 mt-10 max-[637px]:flex-col'>
                         <Link to={'https://github.com/souravsaha5703'} target='_blank' className='bg-black flex items-center justify-center px-6 gap-2 h-11 rounded-lg hover:bg-black'>
                             <IoLogoGithub className='text-xl text-white' />
                             <span className='font-montserrat font-medium text-white text-base'>Github</span>
