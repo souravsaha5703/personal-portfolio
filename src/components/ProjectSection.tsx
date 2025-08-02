@@ -3,7 +3,7 @@ import { Particles } from "@/components/magicui/particles";
 import synctaskImg from "@/assets/synctask.png";
 import ProjectCards from './ProjectCards';
 import vehicleDocs360Img from "@/assets/vehicleDocs360.png";
-import sideLineFootballImg from "@/assets/sidelineImg.jpeg";
+import hearmediImg from "@/assets/hearmedi.png";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { motion } from "motion/react";
 import { useTheme } from "@/components/theme-provider";
@@ -20,9 +20,18 @@ interface ProjectsInterface {
 
 const projects: ProjectsInterface[] = [
     {
+        projectImg: hearmediImg,
+        title: "HearMedi",
+        timeframe: "Jun 25 - Jun 25",
+        desc: "It is a smart GenAI-powered web application that helps users understand their medicines by simply uploading a picture of a medicine packet. It will extract and filter medicine info and generate user friendly explanations.",
+        techStack: ["React Js", "Typescript", "Tailwind CSS", "Shadcn Ui", "OCR", "OpenAI", "Murf AI", "Framer Motion"],
+        link: "https://hearmedi.vercel.app/",
+        githublink: "https://github.com/souravsaha5703/hear-medicine"
+    },
+    {
         projectImg: synctaskImg,
         title: "SyncTask",
-        timeframe: "Jan 25 - Apr 25",
+        timeframe: "Jan 2025 - Apr 2025",
         desc: "SyncTasks is a web-based to-do application designed for efficient task management, smart analytics, and seamless team collaboration. It helps users stay organized, track progress, and work together to get things done.",
         techStack: ["React Js", "Typescript", "Tailwind CSS", "Appwrite", "Shadcn Ui", "Framer Motion", "React Redux", "Recharts", "Magic Ui"],
         link: "https://collaborative-todo-mauve.vercel.app/",
@@ -37,15 +46,6 @@ const projects: ProjectsInterface[] = [
         link: "https://vehicledocs360web.vercel.app/",
         githublink: "https://github.com/souravsaha5703/vehicle_docs_qr"
     },
-    {
-        projectImg: sideLineFootballImg,
-        title: "Sideline Football",
-        timeframe: "Aug 2024 - Sep 2024",
-        desc: "In this website any one can see football league or cup details around the world. User can see match fixtures, football clubs standings in their respective league and top scorers of that league.",
-        techStack: ["React Js", "Javascript", "Tailwind CSS", "Shadcn Ui", "Rapid API"],
-        link: "https://sidelinefootball.netlify.app/",
-        githublink: "https://github.com/souravsaha5703/football-league-data-react"
-    }
 ]
 
 const ProjectSection: React.FC = () => {
