@@ -1,22 +1,29 @@
 import React from 'react';
-import { Meteors } from "@/components/magicui/meteors";
 import { RiJavascriptFill, RiReactjsFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { motion } from "motion/react";
 import { SpinningText } from "@/components/magicui/spinning-text";
-import { TextAnimate } from "@/components/magicui/text-animate";
+import { Particles } from "@/components/magicui/particles";
 import profileImg from "@/assets/dp.jpeg";
 import Navbar from './Navbar';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { useTheme } from "@/components/theme-provider";
 
 const HeroSection: React.FC = () => {
+    const { theme } = useTheme();
     return (
         <>
             <Navbar />
-            <div className="relative flex bg-slate-100/20 overflow-hidden h-screen w-full flex-col items-center justify-center rounded-lg border dark:bg-[#00072d]" id='home'>
-                <Meteors />
+            <div className="relative flex bg-neutral-100/20 overflow-hidden h-screen w-full flex-col items-center justify-center rounded-lg border dark:bg-neutral-950" id='home'>
+                <Particles
+                    className="absolute inset-0 z-0"
+                    quantity={100}
+                    ease={80}
+                    color={theme === "dark" ? "#ffffff" : "#000000"}
+                    refresh
+                />
                 <div className='max-w-[1000px] p-4 flex flex-col items-start justify-start'>
                     <motion.div
                         initial={{ opacity: 0, x: 40, filter: "blur(8px)" }}
@@ -24,19 +31,19 @@ const HeroSection: React.FC = () => {
                         transition={{ duration: 0.4, ease: "easeIn" }}
                         className='flex gap-4 items-center justify-center'>
                         <img src={profileImg} alt="Profile Image" className='size-32 object-cover object-top rounded-full max-[425px]:size-20' />
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col gap-1'>
                             <motion.h4
                                 initial={{ opacity: 0, filter: "blur(8px)" }}
                                 animate={{ opacity: 1, filter: "blur(0px)" }}
                                 transition={{ duration: 0.5, ease: "easeIn" }}
-                                className='font-montserrat font-medium text-slate-500 text-xl dark:text-slate-50 max-[425px]:text-base'>
+                                className='font-montserrat font-medium text-neutral-500 text-xl dark:text-neutral-50 max-[425px]:text-base'>
                                 Sourav Saha
                             </motion.h4>
                             <motion.h4
                                 initial={{ opacity: 0, filter: "blur(8px)" }}
                                 animate={{ opacity: 1, filter: "blur(0px)" }}
                                 transition={{ duration: 0.6, ease: "easeIn" }}
-                                className='font-montserrat font-medium text-blue-500 text-xl max-[425px]:text-base'>
+                                className='font-montserrat font-medium text-neutral-400 text-xl max-[425px]:text-base'>
                                 Frontend Developer
                             </motion.h4>
                             <div className='flex gap-4 justify-start items-center'>
@@ -76,25 +83,31 @@ const HeroSection: React.FC = () => {
                         <RiReactjsFill className='text-7xl text-cyan-500' />
                     </motion.div>
                     <SpinningText className='absolute bottom-20 right-32 max-[425px]:right-20' radius={6}>learn more • build more • grow more •</SpinningText>
-                    <div className='flex mt-4 items-center justify-center gap-2 leading-tight max-[900px]:leading-none'>
-                        <TextAnimate animation="blurInUp" by="character" className='font-lobstar font-normal text-slate-400 text-6xl dark:text-slate-100 max-[900px]:text-5xl max-[750px]:text-4xl max-[425px]:leading-none max-[375px]:text-2xl' once>
-                            Hey  there! I'm
-                        </TextAnimate>
-                        <TextAnimate animation="blurInUp" by="character" className='font-lobstar font-medium text-blue-600 italic text-8xl tracking-tight leading-tight max-[900px]:text-6xl max-[600px]:text-5xl max-[425px]:leading-none max-[375px]:text-4xl' once delay={0.2}>
-                            Sourav
-                        </TextAnimate>
-                    </div>
-                    <div className='flex items-center justify-center gap-4 max-[556px]:flex-col max-[556px]:items-start'>
-                        <TextAnimate animation="blurInUp" by="character" className='font-lobstar font-normal italic text-blue-600 text-6xl tracking-tight leading-tight max-[900px]:text-5xl max-[600px]:text-4xl max-[425px]:leading-none max-[375px]:text-3xl' once delay={0.2}>
-                            a Frontend Developer
-                        </TextAnimate>
-                        <TextAnimate animation="blurInUp" by="character" className='font-lobstar font-normal text-slate-400 dark:text-slate-100 text-6xl tracking-tight leading-tight max-[900px]:text-5xl max-[750px]:text-4xl max-[425px]:leading-none max-[375px]:text-3xl' once delay={0.2}>
-                            from Kolkata
-                        </TextAnimate>
-                    </div>
-                    <TextAnimate animation="blurInUp" by="character" className='font-lobstar font-normal text-slate-400 dark:text-slate-100 text-6xl tracking-tight leading-tight max-[900px]:text-5xl max-[750px]:text-4xl max-[556px]:w-[340px] max-[425px]:leading-none max-[375px]:text-3xl max-[375px]:w-[270px]' once delay={0.2}>
-                        Love building things and helping people
-                    </TextAnimate>
+                    <motion.div
+                        className='flex flex-col gap-4 mt-6 items-center justify-center leading-snug max-[900px]:leading-none'>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            Hi! I'm Sourav Saha an 22-year-old student, developer, and a curious builder who loves dreaming up cool ideas and making them come true. My expertise lies in responsive user interfaces for web-based apps, ensuring a secure and seamless user experience.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            Whether it's building from scratch, trying new tools, or keeping up with the latest tech trends, I'm always eager to learn and experiment. I'm also passionate about startups and using tech to solve real-world problems in creative ways.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            Right now, I'm focused on learning GenAI and building cool GenAI powered applications, and connecting with others who share the same excitement for tech. My goal is to keep growing and maybe launch something amazing someday.
+                        </motion.p>
+                    </motion.div>
+
                 </div>
             </div>
         </>
