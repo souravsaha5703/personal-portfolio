@@ -31,19 +31,19 @@ const HeroSection: React.FC = () => {
                         transition={{ duration: 0.4, ease: "easeIn" }}
                         className='flex gap-4 items-center justify-center'>
                         <img src={profileImg} alt="Profile Image" className='size-32 object-cover object-top rounded-full max-[425px]:size-20' />
-                        <div className='flex flex-col gap-1'>
+                        <div className='flex flex-col gap-0.5'>
                             <motion.h4
                                 initial={{ opacity: 0, filter: "blur(8px)" }}
                                 animate={{ opacity: 1, filter: "blur(0px)" }}
                                 transition={{ duration: 0.5, ease: "easeIn" }}
-                                className='font-montserrat font-medium text-neutral-500 text-xl dark:text-neutral-50 max-[425px]:text-base'>
+                                className='font-montserrat font-semibold dark:font-medium text-neutral-600 text-xl dark:text-neutral-50 max-[425px]:text-base'>
                                 Sourav Saha
                             </motion.h4>
                             <motion.h4
                                 initial={{ opacity: 0, filter: "blur(8px)" }}
                                 animate={{ opacity: 1, filter: "blur(0px)" }}
                                 transition={{ duration: 0.6, ease: "easeIn" }}
-                                className='font-montserrat font-medium text-neutral-400 text-xl max-[425px]:text-base'>
+                                className='font-montserrat font-medium text-neutral-500 text-xl max-[425px]:text-base'>
                                 Frontend Developer
                             </motion.h4>
                             <div className='flex gap-4 justify-start items-center'>
@@ -89,21 +89,21 @@ const HeroSection: React.FC = () => {
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
                             Hi! I'm Sourav Saha an 22-year-old student, developer, and a curious builder who loves dreaming up cool ideas and making them come true. My expertise lies in responsive user interfaces for web-based apps, ensuring a secure and seamless user experience.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
                             Whether it's building from scratch, trying new tools, or keeping up with the latest tech trends, I'm always eager to learn and experiment. I'm also passionate about startups and using tech to solve real-world problems in creative ways.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                            className='font-literata text-xl text-start font-normal text-neutral-500 dark:text-neutral-100'>
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
                             Right now, I'm focused on learning GenAI and building cool GenAI powered applications, and connecting with others who share the same excitement for tech. My goal is to keep growing and maybe launch something amazing someday.
                         </motion.p>
                     </motion.div>
