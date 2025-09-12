@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
     return (
         <>
             <Navbar />
-            <div className="relative flex bg-neutral-100/20 overflow-hidden h-screen w-full flex-col items-center justify-center rounded-lg border dark:bg-neutral-950" id='home'>
+            <div className="relative flex bg-neutral-100/20 overflow-hidden h-screen w-full flex-col items-center justify-center rounded-lg dark:bg-neutral-950" id='home'>
                 <Particles
                     className="absolute inset-0 z-0"
                     quantity={100}
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
                     color={theme === "dark" ? "#ffffff" : "#000000"}
                     refresh
                 />
-                <div className='max-w-[1000px] p-4 flex flex-col items-start justify-start'>
+                <div className='max-w-[800px] p-4 flex flex-col items-start justify-start'>
                     <motion.div
                         initial={{ opacity: 0, x: 40, filter: "blur(8px)" }}
                         animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}

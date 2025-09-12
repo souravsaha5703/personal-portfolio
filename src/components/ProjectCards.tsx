@@ -26,12 +26,12 @@ const ProjectCards: React.FC<ProjectCardProps> = ({ projectImg, title, timeFrame
     return (
         <BlurFade delay={0.25} inView>
             <Card className={"w-[350px] flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full dark:bg-slate-900/10 dark:backdrop-blur-md dark:shadow-md max-[375px]:w-[300px]"}>
-                <Link to={link} ><img src={projectImg} alt={title} className="h-40 w-full overflow-hidden object-cover object-top" /></Link>
+                <Link to={link} ><img src={projectImg} alt={title} className="h-48 w-full overflow-hidden object-cover object-top" /></Link>
                 <CardHeader className="px-3">
                     <div>
-                        <CardTitle className="text-lg font-bold font-montserrat text-blue-600 dark:text-blue-500">{title}</CardTitle>
-                        <time className="font-montserrat text-sm font-medium text-slate-500">{timeFrame}</time>
-                        <p className="text-base leading-snug font-montserrat text-slate-950 dark:text-slate-300">
+                        <CardTitle className="text-lg font-semibold font-montserrat text-neutral-900 dark:text-neutral-100">{title}</CardTitle>
+                        <time className="font-montserrat text-sm font-medium text-neutral-500">{timeFrame}</time>
+                        <p className="text-base leading-snug font-montserrat text-neutral-950 dark:text-neutral-300">
                             {desc}
                         </p>
                     </div>
@@ -42,7 +42,7 @@ const ProjectCards: React.FC<ProjectCardProps> = ({ projectImg, title, timeFrame
                             {techStack?.map((tech) => (
                                 <Badge
                                     className="px-1 py-0 text-sm font-montserrat font-medium"
-                                    variant="secondary"
+                                    variant="outline"
                                     key={tech}
                                 >
                                     {tech}
@@ -54,13 +54,13 @@ const ProjectCards: React.FC<ProjectCardProps> = ({ projectImg, title, timeFrame
                 <CardFooter className="px-2 pb-2 gap-2">
                     <Link to={link} target="_blank">
                         <Badge className="flex gap-2 px-2 py-1 text-sm">
-                            <CiGlobe className='text-base text-slate-100 dark:text-black' />
+                            <CiGlobe className='text-base font-montserrat text-neutral-100 dark:text-neutral-950' />
                             Website
                         </Badge>
                     </Link>
                     <Link to={githubLink} target="_blank">
                         <Badge className="flex gap-2 px-2 py-1 text-sm">
-                            <IoLogoGithub className='text-base text-slate-100 dark:text-black' />
+                            <IoLogoGithub className='text-base font-montserrat text-neutral-100 dark:text-neutral-950' />
                             Github
                         </Badge>
                     </Link>
