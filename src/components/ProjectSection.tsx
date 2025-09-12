@@ -61,15 +61,15 @@ const ProjectSection: React.FC = () => {
                     refresh
                 />
                 <div className='max-w-[800px] p-4 flex flex-col items-start justify-start space-y-4'>
-                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-900 dark:text-neutral-100 text-4xl tracking-tight leading-tight'>Featured Projects</TextAnimate>
+                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-900 dark:text-neutral-100 text-4xl tracking-tight leading-tight max-[425px]:text-3xl'>Featured Projects</TextAnimate>
                     <motion.p
                         initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ ease: "easeIn", delay: 0.1, duration: 0.3 }}
-                        className='font-montserrat font-medium dark:font-normal text-start text-lg text-neutral-500 dark:text-neutral-400 break-keep max-[768px]:px-5 max-[768px]:text-base'>
+                        className='font-montserrat font-medium dark:font-normal text-start text-lg text-neutral-500 dark:text-neutral-400 break-keep max-[425px]:text-base'>
                         I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
                     </motion.p>
-                    <div className='w-full flex py-5 flex-wrap gap-4 items-start justify-start'>
+                    <div className='w-full flex py-5 flex-wrap gap-4 items-start justify-start max-[745px]:items-center max-[745px]:justify-center'>
                         {projects.map((project, index) => {
                             return (
                                 <ProjectCards

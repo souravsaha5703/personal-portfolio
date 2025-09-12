@@ -102,17 +102,17 @@ const SkillsSection: React.FC = () => {
         refresh
       />
       <div className='max-w-[800px] p-4 flex flex-col items-start justify-start space-y-4'>
-        <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-900 dark:text-neutral-100 text-4xl tracking-tight leading-tight'>Skills</TextAnimate>
+        <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-900 dark:text-neutral-100 text-4xl tracking-tight leading-tight max-[425px]:text-3xl'>Skills</TextAnimate>
         <motion.p
           initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ ease: "easeIn", delay: 0.1, duration: 0.3 }}
-          className='font-montserrat font-medium dark:font-normal text-start text-lg text-neutral-500 dark:text-neutral-400 break-keep max-[768px]:px-5 max-[768px]:text-base'>
+          className='font-montserrat font-medium dark:font-normal text-start text-lg text-neutral-500 dark:text-neutral-400 break-keep max-[425px]:text-base'>
           These are the technologies I've learned and worked with. This list is constantly evolving as I continue to learn and grow as a developer.
         </motion.p>
         <div className='w-full flex flex-col items-start space-y-4'>
-          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400'>Languages</h3>
-          <div className='w-full flex gap-2 mt-2'>
+          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400 max-[425px]:text-lg'>Languages</h3>
+          <div className='w-full flex gap-2 mt-2 flex-wrap'>
             {languages.map((language, index) => {
               return (
                 <Badge key={index} variant={'outline'} className='flex gap-2 text-sm font-montserrat font-medium dark:font-normal text-neutral-950 dark:text-neutral-200 px-2 py-1'>
@@ -122,8 +122,8 @@ const SkillsSection: React.FC = () => {
               )
             })}
           </div>
-          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400'>Frameworks / Libraries</h3>
-          <div className='w-full flex gap-2 mt-2'>
+          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400 max-[425px]:text-lg'>Frameworks / Libraries</h3>
+          <div className='w-full flex gap-2 mt-2 flex-wrap'>
             {libraries.map((library, index) => {
               return (
                 <Badge key={index} variant={'outline'} className='flex gap-2 text-sm font-montserrat font-medium dark:font-normal text-neutral-950 dark:text-neutral-200 px-2 py-1'>
@@ -133,15 +133,15 @@ const SkillsSection: React.FC = () => {
               )
             })}
           </div>
-          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400'>Backend / Runtime</h3>
-          <div className='w-full flex gap-2 mt-2'>
+          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400 max-[425px]:text-lg'>Backend / Runtime</h3>
+          <div className='w-full flex gap-2 mt-2 flex-wrap'>
             <Badge variant={'outline'} className='flex gap-2 text-sm font-montserrat font-medium dark:font-normal text-neutral-950 dark:text-neutral-200 px-2 py-1'>
               <img src={nodeIcon} className='size-4 object-contain' alt="Nodejs" />
               Node.js
             </Badge>
           </div>
-          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400'>Developer Tools</h3>
-          <div className='w-full flex gap-2 mt-2'>
+          <h3 className='text-xl font-montserrat font-semibold text-neutral-500 dark:text-neutral-400 max-[425px]:text-lg'>Developer Tools</h3>
+          <div className='w-full flex gap-2 mt-2 flex-wrap'>
             {developerTools.map((devTool, index) => {
               return (
                 <Badge key={index} variant={'outline'} className='flex gap-2 text-sm font-montserrat font-medium dark:font-normal text-neutral-950 dark:text-neutral-200 px-2 py-1'>

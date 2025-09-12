@@ -1,6 +1,4 @@
 import React from 'react';
-import { RiJavascriptFill, RiReactjsFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
 import { motion } from "motion/react";
 import { SpinningText } from "@/components/magicui/spinning-text";
 import { Particles } from "@/components/magicui/particles";
@@ -59,52 +57,30 @@ const HeroSection: React.FC = () => {
                             </div>
                         </div>
                     </motion.div>
+                    
+                    <SpinningText className='absolute bottom-20 right-32 max-[500px]:right-16 max-[500px]:bottom-16' radius={5}>learn more • build more • grow more •</SpinningText>
                     <motion.div
-                        initial={{ x: 40, opacity: 0, filter: "blue(8px)" }}
-                        animate={{ x: 0, opacity: 1, filter: "blue(0px)", rotate: -45 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className='absolute top-32 right-12 bg-slate-950 rounded-md drop-shadow-md'>
-                        <RiJavascriptFill className='text-7xl text-yellow-300 max-[556px]:hidden' />
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ x: -40, opacity: 0, filter: "blue(8px)" }}
-                        animate={{ x: 0, opacity: 1, filter: "blue(0px)", rotate: 45 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className='absolute top-32 left-20 bg-slate-50 dark:bg-transparent rounded-md drop-shadow-md max-[1156px]:hidden'>
-                        <BiLogoTypescript className='text-7xl text-blue-500' />
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ y: 40, opacity: 0, filter: "blue(8px)" }}
-                        animate={{ y: 0, opacity: 1, filter: "blue(0px)", rotate: 45 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className='absolute bottom-10 left-32 bg-slate-50 dark:bg-transparent rounded-lg drop-shadow-md max-[900px]:left-20 max-[425px]:left-10'>
-                        <RiReactjsFill className='text-7xl text-cyan-500' />
-                    </motion.div>
-                    <SpinningText className='absolute bottom-20 right-32 max-[425px]:right-20' radius={6}>learn more • build more • grow more •</SpinningText>
-                    <motion.div
-                        className='flex flex-col gap-4 mt-6 items-center justify-center leading-snug max-[900px]:leading-none'>
+                        className='flex flex-col gap-4 mt-6 items-center justify-center'>
                         <motion.p
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
-                            Hi! I'm Sourav Saha an 22-year-old student, developer, and a curious builder who loves dreaming up cool ideas and making them come true. My expertise lies in responsive user interfaces for web-based apps, ensuring a secure and seamless user experience.
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100 max-[800px]:text-base'>
+                            Hi! I'm Sourav Saha an 22-year-old student, developer, and a curious builder who loves dreaming up cool ideas and making them come true.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
-                            Whether it's building from scratch, trying new tools, or keeping up with the latest tech trends, I'm always eager to learn and experiment. I'm also passionate about startups and using tech to solve real-world problems in creative ways.
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100 max-[800px]:text-base'>
+                            Whether it's building from scratch, trying new tools, or keeping up with the latest tech trends, I'm always eager to learn and experiment.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100'>
-                            Right now, I'm focused on learning GenAI and building cool GenAI powered applications, and connecting with others who share the same excitement for tech. My goal is to keep growing and maybe launch something amazing someday.
+                            className='font-literata text-xl text-start font-medium dark:font-normal text-neutral-500 dark:text-neutral-100 max-[800px]:text-base'>
+                            Right now, I'm focused on learning GenAI and building cool GenAI powered applications, and connecting with others who share the same excitement for tech.
                         </motion.p>
                     </motion.div>
 
