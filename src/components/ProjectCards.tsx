@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import { Badge } from './ui/badge';
 import { Link } from 'react-router-dom';
 import { IoLogoGithub } from "react-icons/io";
-import { CiGlobe } from "react-icons/ci";
-import { BlurFade } from "@/components/magicui/blur-fade";
+import { motion } from "motion/react";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface ProjectCardProps {
     projectImg: string | undefined;
@@ -24,50 +16,63 @@ interface ProjectCardProps {
 
 const ProjectCards: React.FC<ProjectCardProps> = ({ projectImg, title, timeFrame, desc, techStack, link, githubLink }) => {
     return (
-        <BlurFade delay={0.25} inView>
-            <Card className={"w-[350px] flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full dark:bg-slate-900/10 dark:backdrop-blur-md dark:shadow-md max-[745px]:w-full"}>
-                <Link to={link} ><img src={projectImg} alt={title} className="h-48 w-full overflow-hidden object-cover max-[745px]:h-full max-[745px]:object-contain" /></Link>
-                <CardHeader className="px-3">
-                    <div>
-                        <CardTitle className="text-lg font-semibold font-montserrat text-neutral-900 dark:text-neutral-100">{title}</CardTitle>
-                        <time className="font-montserrat text-sm font-medium text-neutral-500">{timeFrame}</time>
-                        <p className="text-base leading-snug font-montserrat text-neutral-950 dark:text-neutral-300">
-                            {desc}
-                        </p>
-                    </div>
-                </CardHeader>
-                <CardContent className="flex flex-col px-2">
-                    {techStack && techStack.length > 0 && (
-                        <div className="mt-2 flex flex-wrap gap-1">
-                            {techStack?.map((tech) => (
-                                <Badge
-                                    className="px-1 py-0 text-sm font-montserrat font-medium"
-                                    variant="outline"
-                                    key={tech}
-                                >
-                                    {tech}
-                                </Badge>
-                            ))}
-                        </div>
-                    )}
-                </CardContent>
-                <CardFooter className="px-2 pb-2 gap-2">
-                    <Link to={link} target="_blank">
-                        <Badge className="flex gap-2 px-2 py-1 text-sm">
-                            <CiGlobe className='text-base font-montserrat text-neutral-100 dark:text-neutral-950' />
-                            Website
-                        </Badge>
-                    </Link>
-                    <Link to={githubLink} target="_blank">
-                        <Badge className="flex gap-2 px-2 py-1 text-sm">
-                            <IoLogoGithub className='text-base font-montserrat text-neutral-100 dark:text-neutral-950' />
-                            Github
-                        </Badge>
-                    </Link>
-                </CardFooter>
-            </Card>
-        </BlurFade>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all duration-300 h-full w-full"
+        >
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                <img
+                    src={projectImg}
+                    alt={title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
+                {/* Action Buttons on Hover */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-[-10px] group-hover:translate-y-0">
+                    <Link to={githubLink} target="_blank" className="w-10 h-10 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-sm flex items-center justify-center text-zinc-900 dark:text-zinc-100 hover:scale-110 transition-transform shadow-lg">
+                        <IoLogoGithub size={20} />
+                    </Link>
+                    <Link to={link} target="_blank" className="w-10 h-10 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-sm flex items-center justify-center text-zinc-900 dark:text-zinc-100 hover:scale-110 transition-transform shadow-lg">
+                        <FiArrowUpRight size={22} />
+                    </Link>
+                </div>
+            </div>
+
+            <div className="flex flex-col flex-1 p-6">
+                <div className="flex items-start justify-between mb-3 gap-2">
+                    <Link to={link} target="_blank" className="hover:opacity-70 transition-opacity">
+                        <h3 className="text-xl font-bold font-montserrat text-zinc-900 dark:text-zinc-100 leading-tight transition-colors">
+                            {title}
+                        </h3>
+                    </Link>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 font-montserrat shrink-0">
+                        {timeFrame}
+                    </span>
+                </div>
+
+                <p className="text-sm font-montserrat text-zinc-500 dark:text-zinc-400 mb-6 flex-1">
+                    {desc}
+                </p>
+
+                {techStack && techStack.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                        {techStack.map((tech) => (
+                            <span
+                                key={tech}
+                                className="text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-md bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </motion.div>
     )
 }
 

@@ -1,12 +1,9 @@
 import React from 'react';
-import { Particles } from "@/components/magicui/particles";
 import synctaskImg from "@/assets/synctask.png";
 import ProjectCards from './ProjectCards';
 import vehicleDocs360Img from "@/assets/vehicleDocs360pic.png";
 import hearmediImg from "@/assets/hearmedi.png";
-import { TextAnimate } from "@/components/magicui/text-animate";
 import { motion } from "motion/react";
-import { useTheme } from "@/components/theme-provider";
 
 interface ProjectsInterface {
     projectImg: string;
@@ -49,45 +46,38 @@ const projects: ProjectsInterface[] = [
 ]
 
 const ProjectSection: React.FC = () => {
-    const { theme } = useTheme();
     return (
-        <>
-            <div className="relative flex bg-neutral-100/20 overflow-hidden min-h-[80vh] w-full flex-col items-center justify-center rounded-lg dark:bg-neutral-950" id='projects'>
-                <Particles
-                    className="absolute inset-0 z-0"
-                    quantity={100}
-                    ease={80}
-                    color={theme === "dark" ? "#ffffff" : "#000000"}
-                    refresh
-                />
-                <div className='max-w-[800px] p-4 flex flex-col items-start justify-start space-y-4'>
-                    <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-900 dark:text-neutral-100 text-4xl tracking-tight leading-tight max-[425px]:text-3xl'>Featured Projects</TextAnimate>
-                    <motion.p
-                        initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
-                        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ ease: "easeIn", delay: 0.1, duration: 0.3 }}
-                        className='font-montserrat font-medium dark:font-normal text-start text-lg text-neutral-500 dark:text-neutral-400 break-keep max-[425px]:text-base'>
+        <section className="w-full bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300 font-sans py-20" id='projects'>
+            <div className="max-w-6xl mx-auto px-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ ease: "easeOut", duration: 0.5 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="mb-12"
+                >
+                    <h2 className='font-literata font-bold text-zinc-900 dark:text-zinc-100 text-4xl tracking-tight'>Featured Projects</h2>
+                    <p className='font-montserrat mt-3 text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl'>
                         I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
-                    </motion.p>
-                    <div className='w-full flex py-5 flex-wrap gap-4 items-start justify-start max-[745px]:items-center max-[745px]:justify-center'>
-                        {projects.map((project, index) => {
-                            return (
-                                <ProjectCards
-                                    key={index}
-                                    projectImg={project.projectImg}
-                                    title={project.title}
-                                    timeFrame={project.timeframe}
-                                    desc={project.desc}
-                                    techStack={project.techStack}
-                                    link={project.link}
-                                    githubLink={project.githublink}
-                                />
-                            )
-                        })}
-                    </div>
+                    </p>
+                </motion.div>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {projects.map((project, index) => (
+                        <ProjectCards
+                            key={index}
+                            projectImg={project.projectImg}
+                            title={project.title}
+                            timeFrame={project.timeframe}
+                            desc={project.desc}
+                            techStack={project.techStack}
+                            link={project.link}
+                            githubLink={project.githublink}
+                        />
+                    ))}
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const ContactSection: React.FC = () => {
     return (
         <>
-            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden bg-neutral-100/20 dark:bg-neutral-950' id='contact'>
+            <div className='relative w-full h-[700px] flex items-center justify-center gap-10 overflow-hidden bg-zinc-50 dark:bg-zinc-950' id='contact'>
                 <Ripple />
                 <div className='flex flex-col gap-5 items-center justify-center px-2 max-[768px]:px-5'>
                     <TextAnimate animation="blurInUp" by="character" className='font-literata font-bold text-neutral-950 dark:text-neutral-100 text-6xl tracking-tight leading-tight max-[768px]:text-5xl max-[425px]:text-4xl max-[393px]:text-center max-[393px]:text-[30px] max-[336px]:text-[24px]'>Lets Stay Connected</TextAnimate>

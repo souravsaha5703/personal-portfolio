@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
-import InfiniteLanguageCards from '@/components/InfiniteLanguageCards';
+// import InfiniteLanguageCards from '@/components/InfiniteLanguageCards';
 import ProjectSection from '@/components/ProjectSection';
 import FooterSection from '@/components/FooterSection';
 import ContactSection from '@/components/ContactSection';
@@ -12,9 +12,9 @@ const Page: React.FC = () => {
       <HeroSection />
       <SkillsSection />
       <ProjectSection />
-      <div className="flex flex-col gap-8 w-full py-10 bg-neutral-100/20 dark:bg-neutral-950">
+      {/* <div className="flex flex-col gap-8 w-full py-10 bg-neutral-100/20 dark:bg-neutral-950">
         <InfiniteLanguageCards direction="left" speed="normal" />
-      </div>
+      </div> */}
       <ContactSection/>
       <FooterSection />
     </div>
