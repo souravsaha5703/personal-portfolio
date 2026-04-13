@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "motion/react";
 import profileImg from "@/assets/dp.jpeg";
+import Navbar from './Navbar';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
@@ -111,9 +112,10 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <div className="min-h-[90vh] bg-zinc-50 dark:bg-zinc-950 font-sans pb-20 transition-colors duration-300" id='home'>
-            <main className="max-w-6xl mx-auto px-4 mt-8 md:mt-12">
-                <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6">
+        <div className="min-h-[90vh] w-full bg-zinc-50 dark:bg-zinc-950 font-sans pb-20 pt-20 lg:pt-24 transition-colors duration-300 flex flex-col justify-center items-center relative" id='home'>
+            <Navbar />
+            <main className="w-full max-w-6xl mx-auto px-4 mt-8 md:mt-12 flex-1 flex flex-col justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 w-full">
                     {/* Left Column - Profile Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
