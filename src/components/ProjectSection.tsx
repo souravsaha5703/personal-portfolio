@@ -3,6 +3,8 @@ import synctaskImg from "@/assets/synctask.png";
 import ProjectCards from './ProjectCards';
 import vehicleDocs360Img from "@/assets/vehicleDocs360pic.png";
 import hearmediImg from "@/assets/hearmedi.png";
+import railsetuImg from "@/assets/railsetu.png";
+import cinefusionImg from "@/assets/cinefusion.png";
 import { motion } from "motion/react";
 
 interface ProjectsInterface {
@@ -17,11 +19,30 @@ interface ProjectsInterface {
 
 const projects: ProjectsInterface[] = [
     {
+        projectImg: railsetuImg,
+        title: "RailSetu",
+        timeframe: "May 26 - Jun 26",
+        desc: "RailSetu is an AI-powered smart railway route suggestion system that analyzes routes across 10,000+ stations to help users discover alternative travel paths through junction stations and improve ticket availability.",
+        techStack: ["React Js", "JavaScript", "Tailwind CSS", "Node Js", "Express Js", "MongoDB", "Gemini AI"],
+        link: "https://railsetuweb.vercel.app/",
+        githublink: "https://github.com/souravsaha5703/rail-setu-backend"
+    },
+    {
+
+        projectImg: cinefusionImg,
+        title: "CineFusion",
+        timeframe: "Nov 25 - Dec 25",
+        desc: "CineFusion is a hybrid movie recommendation system by combining content-based filtering with sentiment analysis of user reviews to improve suggestion quality",
+        techStack: ["Python", "FastAPI", "Langchain", "Hugging Face"],
+        link: "https://github.com/souravsaha5703/movie_recommendation_system",
+        githublink: "https://github.com/souravsaha5703/movie_recommendation_system_backend"
+    },
+    {
         projectImg: hearmediImg,
         title: "HearMedi",
         timeframe: "Jun 25 - Jun 25",
         desc: "It is a smart GenAI-powered web application that helps users understand their medicines by simply uploading a picture of a medicine packet. It will extract and filter medicine info and generate user friendly explanations.",
-        techStack: ["React Js", "Typescript", "Tailwind CSS", "Shadcn Ui", "OCR", "OpenAI", "Murf AI", "Framer Motion"],
+        techStack: ["React Js", "Typescript", "Tailwind CSS", "Shadcn UI", "OCR", "OpenAI", "Murf AI", "Framer Motion"],
         link: "https://hearmedi.vercel.app/",
         githublink: "https://github.com/souravsaha5703/hear-medicine"
     },

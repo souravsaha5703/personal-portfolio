@@ -16,6 +16,9 @@ import fastapiIcon from "@/assets/FastAPI.svg";
 import motionIcon from "@/assets/framer-svgrepo-com.svg";
 import vscodeIcon from "@/assets/Visual Studio Code.svg";
 import vercelIcon from "@/assets/Vercel.svg";
+import javaIcon from "@/assets/java-svgrepo-com.svg";
+import mysqlIcon from "@/assets/mysql-svgrepo-com.svg";
+import awsIcon from "@/assets/aws-svgrepo-com.svg";
 
 interface Skills {
   name: String;
@@ -42,6 +45,14 @@ const languages: Skills[] = [
   {
     name: "Typescript",
     icon: typescriptIcon,
+  },
+  {
+    name: "Java",
+    icon: javaIcon
+  },
+  {
+    name: "MySQL",
+    icon: mysqlIcon
   }
 ];
 
@@ -84,6 +95,10 @@ const developerTools: Skills[] = [
   {
     name: "Vercel",
     icon: vercelIcon
+  },
+  {
+    name: "AWS",
+    icon: awsIcon
   }
 ]
 
@@ -178,7 +193,7 @@ const SkillsSection: React.FC = () => {
 
           {/* Developer Tools */}
           <div className="w-full">
-            <motion.h3 variants={itemVariants} className='text-xl font-montserrat font-semibold text-neutral-800 dark:text-neutral-200 mb-2 max-[425px]:text-lg'>Developer Tools</motion.h3>
+            <motion.h3 variants={itemVariants} className='text-xl font-montserrat font-semibold text-neutral-800 dark:text-neutral-200 mb-2 max-[425px]:text-lg'>Developer & Cloud Tools</motion.h3>
             <div className='w-full flex gap-3 flex-wrap'>
               {developerTools.map((devTool, index) => (
                 <motion.div variants={itemVariants} key={index}>

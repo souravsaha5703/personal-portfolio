@@ -157,10 +157,12 @@ const HeroSection: React.FC = () => {
                         </div>
 
                         <div className="flex flex-wrap items-center justify-start gap-2 mt-4 w-full">
-                            <span className="px-3 py-1 font-montserrat bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-md">Frontend</span>
+                            <span className="px-3 py-1 font-montserrat bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-md">Full-Stack</span>
+                            <span className="px-3 py-1 font-montserrat bg-sky-100 dark:bg-sky-900/30 text-sky-800 dark:text-sky-200 text-xs font-medium rounded-md">ReactJS</span>
                             <span className="px-3 py-1 font-montserrat bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 text-xs font-medium rounded-md">Python</span>
                             <span className="px-3 py-1 font-montserrat bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-xs font-medium rounded-md">GenAI</span>
                             <span className="px-3 py-1 font-montserrat bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-xs font-medium rounded-md">DSA</span>
+                            <span className="px-3 py-1 font-montserrat bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 text-xs font-medium rounded-md">AWS</span>
                         </div>
 
                         <p className="text-sm font-montserrat leading-relaxed text-gray-500 dark:text-gray-300 mt-2 text-left">
